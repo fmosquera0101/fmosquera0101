@@ -1,4 +1,4 @@
-package co.com.fredymosquera.hackerrank.interviewprep;
+package co.com.fredymosquera;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
