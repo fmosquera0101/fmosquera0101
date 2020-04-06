@@ -3,14 +3,17 @@ package co.com.fredymosquera;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class MigrationBirds {
+public class MigrationBirdsLessOptimal {
 
     public static void main(String[] args) {
 
-        InputStream inputStream = new MigrationBirds().getClass().getClassLoader().getResourceAsStream("input.txt");
+        InputStream inputStream = new MigrationBirdsLessOptimal().getClass().getClassLoader().getResourceAsStream("input.txt");
         Scanner in = new Scanner(new BufferedReader(new InputStreamReader(inputStream)));
         int n = Integer.parseInt(in.nextLine());
 
@@ -24,38 +27,21 @@ public class MigrationBirds {
     static int migratoryBirds(List<Integer> arr) {
 
         int n = arr.size();
-        List<Integer> freq = Arrays.asList(1, 2, 3, 4, 5);
-        List<Integer> maxArr = Arrays.asList(0, 0, 0, 0, 0);
+        List<Integer> freq = new ArrayList<>(arr);
         int idx = 0;
         int max = -1;
-        for (int i = 0; i < freq.size(); i++) {
-            int count = 1;
-            for (int j = 0; j < n; j++) {
-                if (freq.get(i) == arr.get(j)){
-                    count++;
-                }
-            }
-            maxArr.set(i, count);
-            if(maxArr.get(i) > max){
-                max = maxArr.get(i);
-                idx = i;
-            }
-        }
-        System.out.println("maxArr: "+maxArr);
-        System.out.println("idx: "+idx);
-        System.out.println(freq.get(idx));
 
 
-        /*for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             int count = 1;
             if(freq.get(i) == 0){
                 continue;
             }
-            int j = i + 1;
+            int j = i ;
             for (; j < n ; j++) {
                 if(arr.get(i) == arr.get(j)){
                     freq.set(j, 0);
-                    count++;
+                    count = count + 1;
                 }
             }
             freq.set(i, count);
@@ -63,9 +49,7 @@ public class MigrationBirds {
                 max = freq.get(i);
                 idx = i;
             }
-        }*/
-     //   System.out.println(idx);
-       // System.out.println(freq);
+        }
         return arr.get(idx);
     }
 }
