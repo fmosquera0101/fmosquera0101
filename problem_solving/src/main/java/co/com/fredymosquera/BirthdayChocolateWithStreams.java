@@ -17,14 +17,12 @@ public class BirthdayChocolateWithStreams {
     }
 
     static int birthday(List<Integer> s, int d, int m){
-        if(s.size() == 1 && s.get(0) == d){
-            return 1;
-        }else {
-            return (int) IntStream.range(0, s.size() - 1)
+
+            return (int) IntStream.range(0, s.size() - m + 1)
                     .flatMap(
-                            i -> IntStream.range(1, m)
-                                    .map(j -> s.get(i) + s.get(i + 1))
+                            i -> IntStream.range(i, m+i)
+                                    .map(j -> s.get(j))
                     ).filter(k -> k == d).count();
-        }
+
     }
 }

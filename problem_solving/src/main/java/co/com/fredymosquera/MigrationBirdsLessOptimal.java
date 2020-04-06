@@ -24,14 +24,37 @@ public class MigrationBirds {
     static int migratoryBirds(List<Integer> arr) {
 
         int n = arr.size();
-        List<Integer> type = Arrays.asList(1, 2, 3, 4, 5);
-        List<Integer> freq = Arrays.asList(0, 0, 0, 0, 0);
+        List<Integer> freq = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> maxArr = Arrays.asList(0, 0, 0, 0, 0);
         int idx = 0;
         int max = -1;
-        for (int i = 0; i < type.size(); i++) {
+        for (int i = 0; i < freq.size(); i++) {
             int count = 1;
             for (int j = 0; j < n; j++) {
-                if (type.get(i) == arr.get(j)){
+                if (freq.get(i) == arr.get(j)){
+                    count++;
+                }
+            }
+            maxArr.set(i, count);
+            if(maxArr.get(i) > max){
+                max = maxArr.get(i);
+                idx = i;
+            }
+        }
+        System.out.println("maxArr: "+maxArr);
+        System.out.println("idx: "+idx);
+        System.out.println(freq.get(idx));
+
+
+        /*for (int i = 0; i < n; i++) {
+            int count = 1;
+            if(freq.get(i) == 0){
+                continue;
+            }
+            int j = i + 1;
+            for (; j < n ; j++) {
+                if(arr.get(i) == arr.get(j)){
+                    freq.set(j, 0);
                     count++;
                 }
             }
@@ -40,9 +63,9 @@ public class MigrationBirds {
                 max = freq.get(i);
                 idx = i;
             }
-        }
-
-        System.out.println(freq);
-        return type.get(idx);
+        }*/
+     //   System.out.println(idx);
+       // System.out.println(freq);
+        return arr.get(idx);
     }
 }
