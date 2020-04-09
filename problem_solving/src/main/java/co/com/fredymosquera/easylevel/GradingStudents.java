@@ -1,13 +1,9 @@
-package co.com.fredymosquera;
+package co.com.fredymosquera.easylevel;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-public class GradingStudentsWithStreams {
+public class GradingStudents {
 
 	public static void main(String[] args) {
 		//System.out.println(getNextMultipleOf(73, 5));
@@ -15,12 +11,16 @@ public class GradingStudentsWithStreams {
 		System.out.println(gradingStudents(grades));
 		
 	}
-	
 	public static List<Integer> gradingStudents(List<Integer> grades) {
-		return grades.stream().map(n -> getGrade(n)).collect(Collectors.toList());
+
+		for (int i = 0; i < grades.size(); i++) {
+			grades.set(i, getGrade(grades.get(i)));
+		}
+		return grades;
 
 	}
 	
+
 	static int getGrade(int n) {
 		if(n >= 38) {
 			int nextMultipleOf5 = getNextMultipleOf5(n);
@@ -31,6 +31,7 @@ public class GradingStudentsWithStreams {
 		}
 		return n;
 	}
+	
 	static int getNextMultipleOf5(int n) {
 		return ((n + 5 - 1)/ 5) * 5;
 	}

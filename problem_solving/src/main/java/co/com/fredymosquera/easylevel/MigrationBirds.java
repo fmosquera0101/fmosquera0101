@@ -1,4 +1,4 @@
-package co.com.fredymosquera;
+package co.com.fredymosquera.easylevel;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

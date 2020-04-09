@@ -1,4 +1,4 @@
-package co.com.fredymosquera;
+package co.com.fredymosquera.easylevel;
 
 import java.util.ArrayList;
 import java.util.Arrays;

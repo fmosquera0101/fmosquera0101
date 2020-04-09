@@ -1,4 +1,4 @@
-package co.com.fredymosquera;
+package co.com.fredymosquera.easylevel;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

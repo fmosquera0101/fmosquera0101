@@ -1,4 +1,4 @@
-package co.com.fredymosquera;
+package co.com.fredymosquera.easylevel;
 
 public class CatsAndMouse {
     public static void main(String[] args) {
@@ -6,6 +6,8 @@ public class CatsAndMouse {
         int y = 2;
         int z = 2;
         System.out.println(catAndMouse(x, y, z));
+
+        System.out.println(Math.abs(5-8));
     }
     // Complete the catAndMouse function below.
     static String catAndMouse(int x, int y, int z) {

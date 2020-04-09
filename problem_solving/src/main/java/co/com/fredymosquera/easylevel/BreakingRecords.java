@@ -1,4 +1,4 @@
-package co.com.fredymosquera;
+package co.com.fredymosquera.easylevel;
 
 public class BreakingRecords {
 

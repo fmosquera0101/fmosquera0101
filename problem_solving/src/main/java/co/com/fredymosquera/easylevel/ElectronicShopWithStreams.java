@@ -1,12 +1,10 @@
-package co.com.fredymosquera;
+package co.com.fredymosquera.easylevel;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Optional;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class ElectronicShopWithStreams {
 
