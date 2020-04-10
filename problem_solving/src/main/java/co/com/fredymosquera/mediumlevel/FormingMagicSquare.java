@@ -23,7 +23,6 @@ public class FormingMagicSquare {
                 {{6, 7, 2}, {1, 5, 9}, {8, 3, 4}},
                 {{2, 7, 6}, {9, 5, 1}, {4, 3, 8}},
         };
-        System.out.println(s.length);
         int minCost = 81;
         for (int i = 0; i < 8 ; i++) {
             int tempCost = 0;
