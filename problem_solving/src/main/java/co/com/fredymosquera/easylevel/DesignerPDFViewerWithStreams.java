@@ -1,6 +1,9 @@
 package co.com.fredymosquera.easylevel;
 
-public class DesignerPDFViewer {
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
+public class DesignerPDFViewerWithStreams {
     public static void main(String[] args) {
         String alphabet = "nrdyluacvr";
         System.out.println((int)'a');
@@ -17,19 +20,9 @@ public class DesignerPDFViewer {
 
     // Complete the designerPdfViewer function below.
     static int designerPdfViewer(int[] h, String word) {
+       int max = word.chars().map(c -> c - 97)
+               .map(c -> h[c]).max().getAsInt();
 
-        char[] letters = word.toCharArray();
-        int[] intLet = new int[letters.length];
-        for (int i = 0; i < letters.length ; i++) {
-            intLet[i] =  ((int) letters[i] - 97);
-        }
-        int idx = intLet[0];
-        int max = h[idx];
-        for (int i = 1; i < intLet.length; i++) {
-            if(h[intLet[i]] > max){
-                max = h[intLet[i]];
-            }
-        }
         int sizeWord = word.length();
         return sizeWord*max;
     }
