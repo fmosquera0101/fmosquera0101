@@ -11,7 +11,7 @@ public class TheHurdleRaceWithStreams {
     // Complete the hurdleRace function below.
     static int hurdleRace(int k, int[] height) {
 
-        int max = Arrays.stream(height).max().getAsInt());
+        int max = Arrays.stream(height).max().getAsInt();
 
         if(k < max){
             return  max - k;
