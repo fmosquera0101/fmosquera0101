@@ -23,8 +23,8 @@ public class AppendAndDelete {
                 break;
             }
         }
-        int value = Math.abs (k  - s.length()  - t.length() + (2 * lengthPrefix));
-        if ( value > 2 &&  value % 2 == 0){
+        int value = s.length() - lengthPrefix + t.length() - lengthPrefix;
+        if ( value <= k &&  (k - value) % 2 == 0){
             return "Yes";
         }else{
             return "No";
