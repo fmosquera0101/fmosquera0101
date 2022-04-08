@@ -1,5 +1,6 @@
 package co.com.fredymosquera.easylevel;
 
+import java.math.BigInteger;
 import java.util.*;
 
 public class ACMICPCTeam {
@@ -13,49 +14,21 @@ public class ACMICPCTeam {
     }
 
     public static List<Integer> acmTeam(List<String> topic) {
-        // Write your code here
-
-        Map<String, Integer> teamsTopics = new HashMap<>();
-        Map<String, String> teamPairs = new HashMap<>();
-        Set<Integer> numTeamsMax = new HashSet<>();
         int max = 0;
-        for (int i = 0; i < topic.size() ; i++) {
-            for (int j = i + 1; j < topic.size(); j++) {
-                String teamName = topic.get(i) +" - "+topic.get(j);
-                teamPairs.put(teamName, topic.get(i) +""+topic.get(j));
-//                String[] knownTopicsA = topic.get(i).split("");
-//                String[] knownTopicsB = topic.get(j).split("");
-//
-//                for (int k = 0; k <  knownTopicsA.length; k++) {
-//                    if(knownTopicsA[k].equals("1") || knownTopicsB[k].equals("1")){
-//                        teamsTopics.put(teamName,teamsTopics.getOrDefault( teamName, 0) + 1);
-//                        if(max < teamsTopics.get(teamName)){
-//                            max = teamsTopics.get(teamName);
-//                        }
-//                    }
-//                }
-
-
-
-            }
-        }
-        //0 1 2 3 4 5 6 7
-        for(Map.Entry<String, String> entry : teamPairs.entrySet()){
-            String[] knowTopics = entry.getValue().split("");
-            for (int i = 0, j = knowTopics.length/ 2; i < knowTopics.length/2 ; i++, j--) {
-                if ("1".equals(knowTopics[i]) || "1".equals(knowTopics[j])){
-                    teamsTopics.put(entry.getKey(), teamsTopics.getOrDefault( entry.getKey(), 0) + 1);
-                        if(max < teamsTopics.get(entry.getKey())){
-                            max = teamsTopics.get(entry.getKey());
-                        }
+        int count = 0;
+        for(int i = 0; i < topic.size(); i++) {
+            for(int j = i+1; j < topic.size(); j++) {
+                BigInteger x = new BigInteger(topic.get(i), 2).or(new BigInteger(topic.get(j), 2));
+                int c = x.bitCount();
+                if (c > max) {
+                    max = c;
+                    count = 1;
+                } else if (c == max) {
+                    count++;
                 }
             }
-
         }
-        int finalMax = max;
-        int teams = (int) teamsTopics.values().stream().filter(v -> v == finalMax).count();
-
-        return Arrays.asList(max, teams);
+        return Arrays.asList(max, count);
     }
 
     public static List<Integer> acmTeamBruteForce(List<String> topic) {
