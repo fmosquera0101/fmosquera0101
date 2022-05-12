@@ -1,0 +1,20 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Öê…
+J
+java:S6212"/Declare this local variable with "var" instead.(“»ïüøÿÿÿÿ
+E
+java:S6212"/Declare this local variable with "var" instead.(æÕ¿¼
+E
+java:S6212"/Declare this local variable with "var" instead.(•œà©
+U
+java:S1854'"?Remove this useless assignment to local variable "numTeamsMax".(İİ†
+g
+java:S3776""RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(¶Ş’
+J
+java:S6212("/Declare this local variable with "var" instead.(“»ïüøÿÿÿÿ
+E
+java:S6212)"/Declare this local variable with "var" instead.(•œà©
+J
+java:S62120"/Declare this local variable with "var" instead.(ã©øÎûÿÿÿÿ
+F
+java:S1481'"0Remove this unused "numTeamsMax" local variable.(İİ†

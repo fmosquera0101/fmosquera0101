@@ -1,0 +1,15 @@
+
+R
+java:S1854 "7Remove this useless assignment to local variable "sum".(Î½‘ûÿÿÿÿ
+E
+java:S6212"/Declare this local variable with "var" instead.(Éòï
+E
+java:S6212"/Declare this local variable with "var" instead.(ßı®
+J
+java:S6212"/Declare this local variable with "var" instead.(©ŒºÉûÿÿÿÿ
+J
+java:S6212"/Declare this local variable with "var" instead.(¢¡ğÅûÿÿÿÿ
+J
+java:S6212"/Declare this local variable with "var" instead.(¹şîøÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ù©È±
+N	java:S106$"9Replace this use of System.out or System.err by a logger.(±˜ô

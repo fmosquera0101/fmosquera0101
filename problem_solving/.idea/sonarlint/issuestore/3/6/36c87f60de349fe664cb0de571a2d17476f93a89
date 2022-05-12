@@ -1,0 +1,17 @@
+
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Çµí‘
+E
+java:S6212"/Declare this local variable with "var" instead.(æÕ¿¼
+E
+java:S6212"/Declare this local variable with "var" instead.(æÕ¿¼
+1
+java:S3626A"Remove this redundant jump.(ÉŠ©ƒ
+1
+java:S3626E"Remove this redundant jump.(ÉŠ©ƒ
+m
+java:S37761"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(ÖÇÐÒÿÿÿÿÿ
+E
+java:S62124"/Declare this local variable with "var" instead.(æÕ¿¼
+E
+java:S62125"/Declare this local variable with "var" instead.(·£ÿÓ
